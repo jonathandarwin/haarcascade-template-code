@@ -16,6 +16,7 @@ while True:
     frame = cv2.flip(frame, 1)
 
     for classifier in classifiers:
+        # Deteksi objek berdasarkan classifier
         objectDetected = classifier.detectMultiScale(frame, 1.3, 5)
         if objectDetected is not ():
             for (x,y,w,h) in objectDetected:        
